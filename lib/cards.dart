@@ -1,9 +1,15 @@
 class Cards {
-  final String name;
-  final String url;
-  final String text;
+   String name;
+   String url;
 
-  Cards({this.name, this.url, this.text});
+  Cards({this.name, this.url});
 
+
+
+  factory Cards.fromJson(Map<String, dynamic> json) {
+    return Cards(
+      name: json['name'],
+      url: json['url'],
+    );
+  }
 }
-
